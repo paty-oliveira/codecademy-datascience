@@ -10,3 +10,4 @@ The projects are from [Codecademy](https://www.codecademy.com/projects). The app
 - Create a common library for the most used functions and use them during the analysis
 
 1. [FoodWheel](FoodWheel/)
+2. [HurricaneAnalysis](HurricaneAnalysis/)

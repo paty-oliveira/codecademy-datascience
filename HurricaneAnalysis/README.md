@@ -13,3 +13,6 @@ conditionals, lists, dictionaries, string manipulation, and return statements.
 
 1. Write a function that returns a new list of updated damages where the recorded data is converted
 to float values and the missing data is retained as "Damages not recorded".
+2. Write a function that constructs a dictionary made out of the lists, where the keys of the dictionary are the
+names of the hurricanes, and the values are dictionaries themselves containing a key for each piece of data
+(Name, Month, Year,Max Sustained Wind, Areas Affected, Damage, Death) about the hurricane.

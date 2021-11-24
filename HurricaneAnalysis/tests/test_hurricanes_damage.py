@@ -1,5 +1,5 @@
 import unittest
-from HurricaneAnalysis.src.huricane_analysis import update_money_damages
+from HurricaneAnalysis.src.hurricane_analyzer import update_money_damages
 
 
 class TestHurricaneDamage(unittest.TestCase):

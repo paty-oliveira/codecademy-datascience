@@ -9,5 +9,6 @@ The projects are from [Codecademy](https://www.codecademy.com/projects). The app
 - Inspecting the data before any visualization
 - Create a common library for the most used functions and use them during the analysis
 
-1. [FoodWheel](FoodWheel/)
-2. [HurricaneAnalysis](HurricaneAnalysis/)
+1. [Food Wheel](FoodWheel/)
+2. [Hurricane Analysis](HurricaneAnalysis/)
+3. [Honey Production](HoneyProduction/)

@@ -1,19 +1,19 @@
 import unittest
-from HurricaneAnalysis.src.hurricane_analyzer import aggregate_hurricane_info
+from HurricaneAnalysis.src.hurricane_analyzer import aggregate_by_name
 
 
 class TestAggregationHurricaneInformation(unittest.TestCase):
 
     def test_should_aggregate_information_about_the_hurricane_name(self):
         names = ["Cuba I"]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months=[""],
-                                                 years=[""],
-                                                 winds=[""],
-                                                 areas=[""],
-                                                 damages=[""],
-                                                 deaths=[""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months=[""],
+                                          years=[""],
+                                          winds=[""],
+                                          areas=[""],
+                                          damages=[""],
+                                          deaths=[""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "",
                                       "Year": "",
@@ -27,14 +27,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
         names = ["Cuba I", "San Felipe II Okeechobee"]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months=["", ""],
-                                                 years=["", ""],
-                                                 winds=["", ""],
-                                                 areas=["", ""],
-                                                 damages=["", ""],
-                                                 deaths=["", ""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months=["", ""],
+                                          years=["", ""],
+                                          winds=["", ""],
+                                          areas=["", ""],
+                                          damages=["", ""],
+                                          deaths=["", ""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "",
                                       "Year": "",
@@ -58,14 +58,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
     def test_should_aggregate_information_about_the_month(self):
         names = ["Cuba I"]
         months = ["October"]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years=[""],
-                                                 winds=[""],
-                                                 areas=[""],
-                                                 damages=[""],
-                                                 deaths=[""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years=[""],
+                                          winds=[""],
+                                          areas=[""],
+                                          damages=[""],
+                                          deaths=[""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": "",
@@ -80,14 +80,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
 
         names = ["Cuba I", "San Felipe II Okeechobee"]
         months = ["October", "September"]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years=["", ""],
-                                                 winds=["", ""],
-                                                 areas=["", ""],
-                                                 damages=["", ""],
-                                                 deaths=["", ""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years=["", ""],
+                                          winds=["", ""],
+                                          areas=["", ""],
+                                          damages=["", ""],
+                                          deaths=["", ""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": "",
@@ -112,14 +112,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
         names = ["Cuba I"]
         months = ["October"]
         years = [1924]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years,
-                                                 winds=[""],
-                                                 areas=[""],
-                                                 damages=[""],
-                                                 deaths=[""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years,
+                                          winds=[""],
+                                          areas=[""],
+                                          damages=[""],
+                                          deaths=[""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": 1924,
@@ -137,14 +137,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
         months = ["October"]
         years = [1924]
         winds = [165]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years,
-                                                 winds,
-                                                 areas=[""],
-                                                 damages=[""],
-                                                 deaths=[""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years,
+                                          winds,
+                                          areas=[""],
+                                          damages=[""],
+                                          deaths=[""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": 1924,
@@ -162,14 +162,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
         years = [1924]
         winds = [165]
         areas = [['Central America', 'Mexico', 'Cuba', 'Florida', 'The Bahamas']]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years,
-                                                 winds,
-                                                 areas,
-                                                 damages=[""],
-                                                 deaths=[""]
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years,
+                                          winds,
+                                          areas,
+                                          damages=[""],
+                                          deaths=[""]
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": 1924,
@@ -188,13 +188,13 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
         winds = [165]
         areas = [['Central America', 'Mexico', 'Cuba', 'Florida', 'The Bahamas']]
         damages = ['Damages not recorded']
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years,
-                                                 winds,
-                                                 areas,
-                                                 damages,
-                                                 deaths=[""])
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years,
+                                          winds,
+                                          areas,
+                                          damages,
+                                          deaths=[""])
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": 1924,
@@ -214,14 +214,14 @@ class TestAggregationHurricaneInformation(unittest.TestCase):
         areas = [['Central America', 'Mexico', 'Cuba', 'Florida', 'The Bahamas']]
         damages = ['Damages not recorded']
         deaths = [90]
-        actual_result = aggregate_hurricane_info(names,
-                                                 months,
-                                                 years,
-                                                 winds,
-                                                 areas,
-                                                 damages,
-                                                 deaths
-                                                 )
+        actual_result = aggregate_by_name(names,
+                                          months,
+                                          years,
+                                          winds,
+                                          areas,
+                                          damages,
+                                          deaths
+                                          )
         expected_result = {"Cuba I": {"Name": "Cuba I",
                                       "Month": "October",
                                       "Year": 1924,

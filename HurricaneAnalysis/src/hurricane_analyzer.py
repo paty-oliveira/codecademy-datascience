@@ -14,13 +14,13 @@ def update_money_damages(damages: list) -> list:
     return updated_damages
 
 
-def aggregate_hurricane_info(names: list,
-                             months: list,
-                             years: list,
-                             winds: list,
-                             areas: list,
-                             damages: list,
-                             deaths: list) -> dict:
+def aggregate_by_name(names: list,
+                      months: list,
+                      years: list,
+                      winds: list,
+                      areas: list,
+                      damages: list,
+                      deaths: list) -> dict:
     return {
         names[i]: {"Name": names[i],
                    "Month": months[i],
@@ -32,3 +32,6 @@ def aggregate_hurricane_info(names: list,
                    }
         for i in range(len(names))
     }
+
+
+

@@ -279,4 +279,6 @@ cython_debug/
 # Support for Project snippet scope
 !.vscode/*.code-snippets
 
+YelpRatingPredictor/data/*.json
+
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,jupyternotebooks,python,visualstudiocode
